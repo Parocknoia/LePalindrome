@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- <html lang="fr"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+</head>
+<body>
+<h1> Votre mot est-il un palindrome?</h1>
+   
+    <style>  
+        h1 {  
+        text-align: center;  
+        padding: 30px;  
+        background-color: skyblue;  
+        color: black;  
+        }  
+          
+        .palindrome {  
+        margin: auto;  
+        width:13%;  
+        border: 3px solid black;  
+        background-color: skyblue;
+        border-radius: 5px;  
+        padding: 30px;  
+        }  
+          
+       
+        </style>  
+
+<div class="palindrome">  
+        <button type = "button" onclick = "palindrome()" > Cliquer ici pour écrire votre mot </button>  
+</div>   
+
+
+<script type="text/javascript">
+function palindrome(entree)
+{
+    var entree = prompt("Veillez saisir votre mot :)").toLowerCase();
+        entree_1 = [...entree].reverse().join('');
+
+
+
+if (entree === "") {
+    alert('Veuillez saisir un mot d\'abord');
+}
+
+else if (entree === entree_1) {
+    alert(entree + ' est un palindrome');
+}
+
+else {
+    alert(entree + ' n\'est pas un palindrome');
+}
+}
+
+
+</script>
+</body>
+</html>
